@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f9989f</color>
+    <color name="colorPrimaryDark">#F87F87</color>
+    <color name="colorAccent">#fccb8f</color>
+
+    <color name="endColorAnimation">#facd49</color>
+    <color name="startColorAnimation">#5d50c6</color>
+
+    <color name="rainbow_red">#E57373</color>
+    <color name="rainbow_orange">#FFB74D</color>
+    <color name="rainbow_yellow">#FFF176</color>
+    <color name="rainbow_green">#81C784</color>
+    <color name="rainbow_blue">#64B5F6</color>
+    <color name="rainbow_purple">#9575CD</color>
+
+    <color name="background">#FFFBFA</color>
+    <color name="black">#000000</color>
+    <color name="dark_button">#272B27</color>
+</resources>

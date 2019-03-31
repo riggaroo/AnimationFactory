@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/colorPrimary"
+             tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/app_bar"
+                app:titleTextColor="@color/background"
+                android:layout_width="match_parent"
+                android:elevation="0dp"
+                android:layout_height="?attr/actionBarSize"
+                app:title="@string/app_name" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="56dp"
+
+            android:elevation="16dp">
+
+        <app.rigs.theanimationfactory.customview.AnimatedRainbowTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/the_animation_factory"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="32dp" android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp" android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textAlignment="viewStart" android:id="@+id/textViewHeading" android:fontFamily="@font/willywonka"
+                android:textSize="36sp"/>
+        <Button
+                android:text="@string/animated_vector_drawables"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonAvd" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                style="@style/Widget.AppCompat.Button.Colored"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDescription"
+                android:layout_marginTop="32dp"/>
+        <TextView
+                android:text="@string/app_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewDescription"
+                app:layout_constraintTop_toBottomOf="@+id/textViewHeading" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"/>
+        <Button
+                android:text="@string/lottie"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonLottie" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/buttonAvd" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp" style="@style/Widget.AppCompat.Button.Colored"/>
+        <TextView
+                android:text="@string/icons_credit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                android:layout_marginBottom="16dp" app:layout_constraintBottom_toBottomOf="parent" android:textSize="10sp"/>
+        <Button
+                android:text="@string/custom_view_animation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonCustomView" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/buttonLottie"
+                style="@style/Widget.AppCompat.Button.Colored"/>
+        <Button
+                android:text="@string/motion_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonMotionLayout" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/buttonCustomView"/>
+        <Button
+                android:text="PHYSICS BASED ANIMATION"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonPhysicsBasedAnim" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/buttonMotionLayout"/>
+        <Button
+                android:text="View Property Animator"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonViewPropertyAnimator" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/buttonPhysicsBasedAnim"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="subscription_guideline_margin_percent">0.04</dimen>
+    <dimen name="subscription_guideline_margin_percent_end">0.96</dimen>
+    <dimen name="radius_pill_button_subscribe">36dp</dimen>
+    <dimen name="height_pill_button_subscribe">64dp</dimen>
+</resources>

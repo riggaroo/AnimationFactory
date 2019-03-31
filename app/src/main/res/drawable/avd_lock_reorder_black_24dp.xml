@@ -1,0 +1,113 @@
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:name="vector"
+            android:width="24dp"
+            android:height="24dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+            <group android:name="lock">
+                <group
+                    android:name="lock_bar_group"
+                    android:pivotX="12"
+                    android:pivotY="12">
+                    <path
+                        android:name="lock_bar"
+                        android:pathData="M 17 10 L 17 8 C 17 5.24 14.76 3 12 3 C 9.24 3 7 5.24 7 8 L 8.9 8 C 8.9 6.29 10.29 4.9 12 4.9 C 13.71 4.9 15.1 6.29 15.1 8 L 15.1 10 L 17 10 Z"
+                        android:fillColor="#000"
+                        android:strokeWidth="1"/>
+                </group>
+                <path
+                    android:name="lock_top"
+                    android:pathData="M 14 15.044 C 14 15.029 14 15.015 14 15 C 14 13.9 13.1 13 12 13 C 10.9 13 10 13.9 10 15 C 10 15.01 10 15.02 10 15.03 L 4 15.009 L 4 10 C 4 8.9 4.9 8 6 8 L 18 8 C 19.1 8 20 8.9 20 10 L 20 15.065 L 14 15.044 Z"
+                    android:fillColor="#000"
+                    android:strokeWidth="1"/>
+                <path
+                    android:name="lock_bottom"
+                    android:pathData="M 10 15 C 10 16.1 10.9 17 12 17 C 13.1 17 14 16.1 14 15 L 20 15 L 20 20 C 20 21.1 19.1 22 18 22 L 6 22 C 4.9 22 4 21.1 4 20 L 4 15 L 10 15 Z"
+                    android:fillColor="#000"
+                    android:strokeWidth="1"/>
+            </group>
+        </vector>
+    </aapt:attr>
+    <target android:name="lock_bar_group">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="translateY"
+                    android:duration="300"
+                    android:valueFrom="0"
+                    android:valueTo="-2"
+                    android:valueType="floatType"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+                <objectAnimator
+                    android:propertyName="translateY"
+                    android:startOffset="300"
+                    android:duration="100"
+                    android:valueFrom="-2"
+                    android:valueTo="-1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:interpolator/fast_out_linear_in"/>
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="lock_bar">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="fillAlpha"
+                android:startOffset="350"
+                android:duration="50"
+                android:valueFrom="1"
+                android:valueTo="0"
+                android:valueType="floatType"
+                android:interpolator="@android:interpolator/fast_out_linear_in"/>
+        </aapt:attr>
+    </target>
+    <target android:name="lock_top">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="pathData"
+                android:startOffset="300"
+                android:duration="400"
+                android:valueFrom="M 4 10 L 4 15.009 L 10 15.03 C 10 15.02 10 15.01 10 15 C 10 13.9 10.9 13 12 13 C 13.1 13 14 13.9 14 15 C 14 15.015 14 15.029 14 15.044 L 14 15.044 L 20 15.065 L 20 10 C 20 8.9 19.1 8 18 8 L 6 8 C 4.9 8 4 8.9 4 10"
+                android:valueTo="M 3 10.022 L 3 11 L 10.12 11 C 10.12 11 10.12 11 10.12 11 C 10.869 11 11.617 11 12.365 11 C 13.152 11 13.94 11 14.727 11 C 14.747 11 14.767 11 14.787 11 L 14.846 11 L 21 11 L 21 9 C 21 9 21 9 21 9 L 3 9 C 3 9.341 3 9.681 3 10.022"
+                android:valueType="pathType"
+                android:interpolator="@android:interpolator/fast_out_slow_in"/>
+        </aapt:attr>
+    </target>
+    <target android:name="lock_bottom">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="pathData"
+                android:startOffset="300"
+                android:duration="400"
+                android:valueFrom="M 4 15 L 4 20 C 4 21.1 4.9 22 6 22 L 18 22 C 19.1 22 20 21.1 20 20 L 20 15 L 14 15 C 14 16.1 13.1 17 12 17 C 10.9 17 10 16.1 10 15 L 10 15 L 4 15"
+                android:valueTo="M 3 13 L 3 15 C 3.05 15 3.1 15 3.151 15 L 20.929 15 C 20.953 15 20.976 15 21 15 L 21 13 L 13.96 13 C 13.29 13 12.621 13 11.951 13 C 11.262 13 10.573 13 9.884 13 L 9.884 13 L 3 13"
+                android:valueType="pathType"
+                android:interpolator="@android:interpolator/fast_out_slow_in"/>
+        </aapt:attr>
+    </target>
+    <target android:name="lock">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="translateY"
+                    android:duration="300"
+                    android:valueFrom="0"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+                <objectAnimator
+                    android:propertyName="translateY"
+                    android:startOffset="300"
+                    android:duration="400"
+                    android:valueFrom="1"
+                    android:valueTo="0"
+                    android:valueType="floatType"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+            </set>
+        </aapt:attr>
+    </target>
+</animated-vector>

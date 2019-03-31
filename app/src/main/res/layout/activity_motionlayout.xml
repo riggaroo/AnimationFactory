@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                      xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                      xmlns:tools="http://schemas.android.com/tools"
+                                                      android:orientation="vertical"
+                                                      android:layout_width="match_parent"
+                                                      app:showPaths="false"
+                                                      app:layoutDescription="@xml/motion_layout_example"
+                                                      android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            android:id="@+id/appBarLayout"
+            app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/app_bar"
+                app:titleTextColor="@color/background"
+                android:layout_width="match_parent"
+                android:elevation="0dp"
+                android:layout_height="?attr/actionBarSize"
+                app:title="@string/title_motion_layout" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <View android:layout_width="0dp" android:layout_height="0dp"
+          app:layout_constraintStart_toStartOf="parent"
+          android:background="@color/colorPrimary"
+          android:id="@+id/background"
+          app:layout_constraintBottom_toBottomOf="@id/space"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintEnd_toEndOf="parent" android:alpha="0"
+    />
+
+    <ImageView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:scaleType="centerCrop"
+            android:id="@+id/imageViewAvatar"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            app:srcCompat="@drawable/veruca" app:layout_constraintTop_toBottomOf="@+id/appBarLayout"/>
+
+    <TextView
+            android:text="@string/veruca_salt_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewName"
+            android:fontFamily="@font/willywonka"
+            app:layout_constraintStart_toEndOf="@+id/imageViewAvatar"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="@+id/imageViewAvatar" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/space"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:listitem="@layout/list_item_status"
+            android:id="@+id/recyclerViewStatus" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewAvatar">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <Space
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:id="@+id/space"
+            app:layout_constraintStart_toEndOf="@+id/imageViewAvatar"
+            app:layout_constraintTop_toBottomOf="@id/imageViewAvatar"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewAvatar"
+            app:layout_constraintStart_toStartOf="@+id/imageViewAvatar"/>
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

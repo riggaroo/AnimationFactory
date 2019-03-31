@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">The Animation Factory</string>
+    <string name="the_animation_factory">The Animation Factory</string>
+    <string name="animated_vector_drawables">Animated Vector Drawables</string>
+    <string name="app_description">Welcome to a world of pure animation. Let\'s see where your imagination can go. Check
+        out all the different animation examples below.
+    </string>
+    <string name="lottie">Lottie</string>
+    <string name="motion_layout">Motion Layout</string>
+    <string name="icons_credit">Icons made by Freepik from flaticon and is licensed by CC 3.0 BY</string>
+    <string name="custom_view_animation">Custom View Animation</string>
+    <string name="lottie_description">Lottie is a Third Party Library from Airbnb that allows you to import AfterEffects
+        animations into your android and iOS apps.
+    </string>
+    <string name="title_view_property_animator">ViewProperty Animator</string>
+    <string name="title_physics_based_animation">Physics Based Animation</string>
+    <string name="title_motion_layout">MotionLayout</string>
+    <string name="title_lottie">Lottie</string>
+    <string name="title_custom_view">Custom View</string>
+    <string name="title_avd">AnimatedVectorDrawable</string>
+    <string name="spring_animation">Spring Animation</string>
+    <string name="fling_animation">Fling Animation</string>
+    <string name="button_follow">Follow</string>
+    <string name="veruca_salt_name">Veruca Salt</string>
+    <string name="pro_upsell_restore_purchases">Restore Purchases</string>
+    <string name="subscription_get_over_pro">Start your Free Trial</string>
+    <string name="subscription_unlock">Unlock a vast library of images, fonts and templates.</string>
+
+
+</resources>

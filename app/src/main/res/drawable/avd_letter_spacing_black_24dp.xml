@@ -1,0 +1,40 @@
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:name="vector"
+            android:width="24dp"
+            android:height="24dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+            <path
+                android:name="path"
+                android:pathData="M 5.5 18.5 L 18.5 18.5 L 18.5 16 L 22 19.5 L 18.5 23 L 18.5 20.5 L 5.5 20.5 L 5.5 23 L 2 19.5 L 5.5 16 L 5.5 18.5 Z M 11 1 L 13 1 L 18.49 15 L 16.24 15 L 15.12 12 L 8.87 12 L 7.75 15 L 5.5 15 L 11 1 Z M 9.62 10 L 14.38 10 L 12 3.67 L 9.62 10 Z"
+                android:fillColor="#000000"
+                android:strokeColor="#00000000"
+                android:strokeWidth="1"/>
+        </vector>
+    </aapt:attr>
+    <target android:name="path">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="pathData"
+                    android:duration="150"
+                    android:valueFrom="M 5.5 18.5 L 18.5 18.5 L 18.5 16 L 22 19.5 L 18.5 23 L 18.5 20.5 L 5.5 20.5 L 5.5 23 L 2 19.5 L 5.5 16 L 5.5 18.5 Z M 11 1 L 13 1 L 18.49 15 L 16.24 15 L 15.12 12 L 8.87 12 L 7.75 15 L 5.5 15 L 11 1 Z M 9.62 10 L 14.38 10 L 12 3.67 L 9.62 10 Z"
+                    android:valueTo="M 4.2 18.5 L 19.8 18.5 L 19.8 16 L 24 19.5 L 19.8 23 L 19.8 20.5 L 4.2 20.5 L 4.2 23 L 0 19.5 L 4.2 16 L 4.2 18.5 Z M 11 1 L 13 1 L 18.49 15 L 16.24 15 L 15.12 12 L 8.87 12 L 7.75 15 L 5.5 15 L 11 1 Z M 9.62 10 L 14.38 10 L 12 3.67 L 9.62 10 Z"
+                    android:valueType="pathType"
+                    android:interpolator="@android:anim/overshoot_interpolator"/>
+                <objectAnimator
+                    android:propertyName="pathData"
+                    android:startOffset="150"
+                    android:duration="150"
+                    android:valueFrom="M 4.2 18.5 L 19.8 18.5 L 19.8 16 L 24 19.5 L 19.8 23 L 19.8 20.5 L 4.2 20.5 L 4.2 23 L 0 19.5 L 4.2 16 L 4.2 18.5 Z M 11 1 L 13 1 L 18.49 15 L 16.24 15 L 15.12 12 L 8.87 12 L 7.75 15 L 5.5 15 L 11 1 Z M 9.62 10 L 14.38 10 L 12 3.67 L 9.62 10 Z"
+                    android:valueTo="M 5.5 18.5 L 18.5 18.5 L 18.5 16 L 22 19.5 L 18.5 23 L 18.5 20.5 L 5.5 20.5 L 5.5 23 L 2 19.5 L 5.5 16 L 5.5 18.5 Z M 11 1 L 13 1 L 18.49 15 L 16.24 15 L 15.12 12 L 8.87 12 L 7.75 15 L 5.5 15 L 11 1 Z M 9.62 10 L 14.38 10 L 12 3.67 L 9.62 10 Z"
+                    android:valueType="pathType"
+                    android:interpolator="@android:anim/overshoot_interpolator"/>
+            </set>
+        </aapt:attr>
+    </target>
+</animated-vector>
