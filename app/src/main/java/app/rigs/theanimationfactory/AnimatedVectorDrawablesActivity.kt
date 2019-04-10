@@ -48,8 +48,7 @@ class AnimatedVectorDrawablesActivity : AppCompatActivity() {
     }
 
     private fun setupAnimations() {
-        val drawable: AnimatedVectorDrawableCompat? =
-            AnimatedVectorDrawableCompat.create(applicationContext, R.drawable.avd_letter_spacing_black_24dp)
+        val drawable = AnimatedVectorDrawableCompat.create(applicationContext, R.drawable.avd_letter_spacing_black_24dp)
         imageViewAvd.setImageDrawable(drawable)
 
         imageViewAvd.setOnClickListener {
