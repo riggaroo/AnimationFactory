@@ -1,7 +1,5 @@
 package app.rigs.theanimationfactory
 
-import android.animation.Animator
-import android.animation.AnimatorListenerAdapter
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_view_property_animator.*
@@ -47,11 +45,9 @@ class ViewPropertyAnimatorActivity : AppCompatActivity(){
                     .scaleX(0f)
                     .scaleY(0f)
                     .setDuration(2000)
-                    .setListener(object : AnimatorListenerAdapter() {
-                        override fun onAnimationEnd(animation: Animator) {
-                            // Animation finished.
-                        }
-                    })
+                    .withEndAction {
+                        // Animation Finished - maybe do something here?
+                    }
                     .start()
             } else {
                 imageViewGoldenTicket.animate()
@@ -60,11 +56,9 @@ class ViewPropertyAnimatorActivity : AppCompatActivity(){
                     .scaleX(1f)
                     .scaleY(1f)
                     .setDuration(2000)
-                    .setListener(object : AnimatorListenerAdapter() {
-                        override fun onAnimationEnd(animation: Animator) {
-                            // Animation finished.
-                        }
-                    })
+                    .withEndAction {
+                        // Animation finished, maybe do something here?
+                    }
                     .start()
             }
             animated = !animated

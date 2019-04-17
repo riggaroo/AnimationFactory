@@ -59,8 +59,7 @@ class AnimatedSimpleTextView @JvmOverloads constructor(
     fun animateTextSizeColorChange(toSize: Float, @ColorInt toColor: Int) {
         val propertyTextColor = PropertyValuesHolder.ofInt(PROPERTY_TEXT_COLOR, textColor, toColor)
         val propertyTextSize = PropertyValuesHolder.ofFloat(PROPERTY_TEXT_SIZE, size, toSize)
-        ValueAnimator().apply {
-            setValues(propertyTextColor, propertyTextSize)
+        ValueAnimator.ofPropertyValuesHolder(propertyTextColor, propertyTextSize).apply {
             setEvaluator(ArgbEvaluator())
             duration = 500
             addUpdateListener { animation ->
@@ -73,7 +72,7 @@ class AnimatedSimpleTextView @JvmOverloads constructor(
     }
 
     companion object {
-        private const val PROPERTY_TEXT_COLOR = "property_text_color"
-        private const val PROPERTY_TEXT_SIZE = "property_text_size"
+        private const val PROPERTY_TEXT_COLOR = "textColor"
+        private const val PROPERTY_TEXT_SIZE = "size"
     }
 }

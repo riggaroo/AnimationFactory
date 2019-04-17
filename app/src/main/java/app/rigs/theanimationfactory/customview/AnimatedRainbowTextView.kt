@@ -62,26 +62,25 @@ class AnimatedRainbowTextView @JvmOverloads constructor(
 
         val propertyValuesHolder = PropertyValuesHolder.ofFloat(ANIMATED_COLOR_FLOAT_PROPERTY, 0f, 100f)
 
-        val valuesAnimator = ValueAnimator()
-        valuesAnimator.setValues(propertyValuesHolder)
-        valuesAnimator.setEvaluator(FloatEvaluator())
-        valuesAnimator.addUpdateListener { animator ->
-            animationMatrix = Matrix().apply {
-                setRotate(90f)
+        ValueAnimator.ofPropertyValuesHolder(propertyValuesHolder).apply {
+            setEvaluator(FloatEvaluator())
+            addUpdateListener { animator ->
+                animationMatrix = Matrix().apply {
+                    setRotate(90f)
+                }
+                translateXPercentage = animator.getAnimatedValue(ANIMATED_COLOR_FLOAT_PROPERTY) as Float
+                animationMatrix.postTranslate(width * translateXPercentage, 0f) // provides the animation
+                shader?.setLocalMatrix(animationMatrix)
+
+                paint.shader = shader
+                invalidate()
             }
-            translateXPercentage = animator.getAnimatedValue(ANIMATED_COLOR_FLOAT_PROPERTY) as Float
-            animationMatrix.postTranslate(width * translateXPercentage, 0f) // provides the animation
-            shader?.setLocalMatrix(animationMatrix)
 
-            paint.shader = shader
-            invalidate()
+            repeatCount = ValueAnimator.INFINITE
+            interpolator = LinearInterpolator()
+            duration = 60000 * 3
+            start()
         }
-
-        valuesAnimator.repeatCount = ValueAnimator.INFINITE
-        valuesAnimator.interpolator = LinearInterpolator()
-        valuesAnimator.duration = 60000 * 3
-        valuesAnimator.start()
-
     }
 
     companion object {

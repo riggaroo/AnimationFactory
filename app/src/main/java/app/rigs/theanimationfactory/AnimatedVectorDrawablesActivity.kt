@@ -1,9 +1,11 @@
 package app.rigs.theanimationfactory
 
+import android.graphics.drawable.Animatable
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.vectordrawable.graphics.drawable.Animatable2Compat
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
 import kotlinx.android.synthetic.main.activity_animatedvectordrawable.*
@@ -48,33 +50,28 @@ class AnimatedVectorDrawablesActivity : AppCompatActivity() {
     }
 
     private fun setupAnimations() {
-        val drawable = AnimatedVectorDrawableCompat.create(applicationContext, R.drawable.avd_letter_spacing_black_24dp)
+        val drawable = AppCompatResources.getDrawable(this, R.drawable.avd_letter_spacing_black_24dp)
         imageViewAvd.setImageDrawable(drawable)
 
+        AnimatedVectorDrawableCompat.registerAnimationCallback(drawable, object : Animatable2Compat.AnimationCallback() {
+            override fun onAnimationEnd(drawable: Drawable?) {
+                Toast.makeText(applicationContext, "Animation finished", Toast.LENGTH_LONG).show()
+            }
+        })
+
         imageViewAvd.setOnClickListener {
-            val animatedDrawable = imageViewAvd.drawable as AnimatedVectorDrawableCompat
-            animatedDrawable.registerAnimationCallback(object : Animatable2Compat.AnimationCallback() {
-                override fun onAnimationEnd(drawable: Drawable?) {
-                    super.onAnimationEnd(drawable)
-                    Toast.makeText(applicationContext, "Animation finished", Toast.LENGTH_LONG).show()
-                }
-            })
-            animatedDrawable.start()
+            (drawable as Animatable).start()
         }
 
-        val drawableBin: AnimatedVectorDrawableCompat? =
-            AnimatedVectorDrawableCompat.create(applicationContext, R.drawable.avd_bin_open_close_black_24dp)
+        val drawableBin = AppCompatResources.getDrawable(this, R.drawable.avd_bin_open_close_black_24dp)
         imageViewAvd2.setImageDrawable(drawableBin)
-
+        AnimatedVectorDrawableCompat.registerAnimationCallback(drawableBin, object : Animatable2Compat.AnimationCallback() {
+            override fun onAnimationEnd(drawable: Drawable?) {
+                Toast.makeText(applicationContext, "Animation finished", Toast.LENGTH_LONG).show()
+            }
+        })
         imageViewAvd2.setOnClickListener {
-            val animatedDrawable = imageViewAvd2.drawable as AnimatedVectorDrawableCompat
-            animatedDrawable.registerAnimationCallback(object : Animatable2Compat.AnimationCallback() {
-                override fun onAnimationEnd(drawable: Drawable?) {
-                    super.onAnimationEnd(drawable)
-                    Toast.makeText(applicationContext, "Animation finished", Toast.LENGTH_LONG).show()
-                }
-            })
-            animatedDrawable.start()
+            (drawableBin as Animatable).start()
         }
     }
 
